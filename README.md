@@ -31,15 +31,15 @@ The output voltage from the differential amplifier is then connected to the inve
 
 **Astable Multivibrator**
 
-The mechanism starts with both the inverting and non-inverting inputs grounded. However, the output is fed back to both inputs — the non-inverting input is connected to a potential divider, and the inverting input is connected to an adjustable potentiometer and a capacitor.
+The mechanism starts with both the inverting and non-inverting inputs grounded. However, the output is fed back to both inputs; the non-inverting input is connected to a potential divider, and the inverting input is connected to an adjustable potentiometer and a capacitor.
 
-Assuming the output voltage is positive at the beginning, the electrons from the capacitor will be attracted toward the output voltage, meaning current flows toward the capacitor, charging it. As it charges, the voltage at the inverting node of the op-amp builds up and becomes higher than the non-inverting input (assuming an ideal op-amp, so no current flows into the inputs). The output will now go negative, so the capacitor starts discharging toward the negative voltage — the voltage at the inverting node decreases while the voltage at the non-inverting node builds up (assuming *R2* must be bigger than *R1* to generate a higher voltage). In this way, the output voltage becomes positive again.
+Assuming the output voltage is positive at the beginning, the electrons from the capacitor will be attracted toward the output voltage, meaning current flows toward the capacitor, charging it. As it charges, the voltage at the inverting node of the op-amp builds up and becomes higher than the non-inverting input (assuming an ideal op-amp, so no current flows into the inputs). The output will now go negative, so the capacitor starts discharging toward the negative voltage; the voltage at the inverting node decreases while the voltage at the non-inverting node builds up (assuming *R2* must be bigger than *R1* to generate a higher voltage). In this way, the output voltage becomes positive again.
 
 **Integrator**
 
-The next step is the integrator, which acts as the converter from square-wave voltage to triangle-wave voltage. The concept used here is integration — it measures the area under the curve as the output. However, the output is inverted due to the derivation of the formula. Therefore, if the input is positive voltage, the output starts decreasing gradually; when the input changes to negative, the output starts increasing gradually, as shown in the triangle wave graph (Figure 6).
+The next step is the integrator, which acts as the converter from square-wave voltage to triangle-wave voltage. The concept used here is integration; it measures the area under the curve as the output. However, the output is inverted due to the derivation of the formula. Therefore, if the input is positive voltage, the output starts decreasing gradually; when the input changes to negative, the output starts increasing gradually, as shown in the triangle wave graph (Figure 6).
 
-The working principle of the integrator is similar to the differential amplifier — the inverting op-amp tries to keep both of its inputs the same. However, the difference is that one of the resistors is replaced by a capacitor.
+The working principle of the integrator is similar to the differential amplifier; the inverting op-amp tries to keep both of its inputs the same. However, the difference is that one of the resistors is replaced by a capacitor.
 
 <img width="437" height="288" alt="image" src="https://github.com/user-attachments/assets/383c14a2-bee9-42f0-b9c6-9a55cf8df1e6" />
 
@@ -52,7 +52,7 @@ The output forms a PWM signal because the triangle wave voltage is always changi
 
 Furthermore, the duty cycle of the PWM output can be changed depending on the value of the DC voltage from the differential amplifier. If the value increases, the duty cycle decreases — because the duration where the triangle wave voltage is higher becomes shorter, so the output stays at the negative supply voltage (ground) for a longer duration. In contrast, if the DC voltage decreases, the duration where the triangle wave voltage is higher becomes longer, increasing the duration of the positive supply as the output.
 
-Lastly, the transistor diode acts as a switch. It connects the supply voltage (*V1*), the PWM voltage, and the step-down voltage converter. This component matches the duty cycle and frequency from the PWM to the supply voltage and relays it to the step-down voltage converter.
+Lastly, the transistor diode acts as a switch. It connects the supply voltage, the PWM voltage, and the step-down voltage converter. This component matches the duty cycle and frequency from the PWM to the supply voltage and relays it to the step-down voltage converter.
 
 For instance, if the supply voltage is 12V with a PWM duty cycle of 50% and a frequency of 1kHz, the result is a chopped voltage with a maximum of 12V and a minimum of 0V at 1kHz. However, this assumes all components are ideal — in real cases, there may be an input offset voltage, causing the values to be off by a few millivolts.
 
