@@ -51,11 +51,11 @@ In the next step, the DC output voltage from the differential amplifier and the 
 
 The output forms a PWM signal because the triangle wave voltage is always changing and becomes higher and lower than the DC voltage. This results in an output that continuously switches between the positive supply voltage and ground, as seen more clearly in the voltage-time graph (Figure 7).
 
-Furthermore, the duty cycle of the PWM output can be changed depending on the value of the DC voltage from the differential amplifier. If the value increases, the duty cycle decreases — because the duration where the triangle wave voltage is higher becomes shorter, so the output stays at the negative supply voltage (ground) for a longer duration. In contrast, if the DC voltage decreases, the duration where the triangle wave voltage is higher becomes longer, increasing the duration of the positive supply as the output.
+Furthermore, the duty cycle of the PWM output can be changed depending on the value of the DC voltage from the differential amplifier. If the value increases, the duty cycle decreases because the duration where the triangle wave voltage is higher becomes shorter, so the output stays at the negative supply voltage (ground) for a longer duration. In contrast, if the DC voltage decreases, the duration where the triangle wave voltage is higher becomes longer, increasing the duration of the positive supply as the output.
 
 Lastly, the transistor diode acts as a switch. It connects the supply voltage, the PWM voltage, and the step-down voltage converter. This component matches the duty cycle and frequency from the PWM to the supply voltage and relays it to the step-down voltage converter.
 
-For instance, if the supply voltage is 12V with a PWM duty cycle of 50% and a frequency of 1kHz, the result is a chopped voltage with a maximum of 12V and a minimum of 0V at 1kHz. However, this assumes all components are ideal — in real cases, there may be an input offset voltage, causing the values to be off by a few millivolts.
+For instance, if the supply voltage is 12V with a PWM duty cycle of 50% and a frequency of 1kHz, the result is a chopped voltage with a maximum of 12V and a minimum of 0V at 1kHz. However, this assumes all components are ideal; in real cases, there may be an input offset voltage, causing the values to be off by a few millivolts.
 
 <img width="365" height="227" alt="image" src="https://github.com/user-attachments/assets/bfaf51a2-ac13-4e17-9d81-bd4a374ae9c2" />
 
