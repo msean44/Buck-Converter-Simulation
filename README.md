@@ -22,6 +22,7 @@ where *A* is the gain. In open-loop gain, the gain is determined by the specific
 where *Rf* is the feedback resistor and *Ri* is the input resistor. The derivation will be provided in the findings. For the output to always be positive DC, the inverting input always has to be smaller than the non-inverting input. In the opposite case, the output will immediately go to ground, because the negative supply voltage is set to ground.
 
 There needs to be calculations on how this component can determine whether the load battery is fully charged already.
+
 <img width="593" height="193" alt="image" src="https://github.com/user-attachments/assets/117335b3-76cf-4c11-b1e8-7de6d0b52b03" />
 <img width="624" height="493" alt="image" src="https://github.com/user-attachments/assets/14b0bbc0-b0a4-46d9-810b-83286f1531c3" />
 
