@@ -63,9 +63,16 @@ Example calculation:
 Duty cycle (D) = (Time ON / Period) × 100%
 
 Time ON/Above: 7.2350 − 7.23455 = 0.45 ms
+
 Time OFF/Below: 7.23555 − 7.2350 = 0.55 ms
 
 D = (0.45 / 1.0) × 100 = 45%
+
+### DC Smoothing
+There are multiple components in use, such as a switch, diode, inductor, capacitor, and resistor. Components here each have different roles, starting with the switch, which is used to step down the frequency of the voltage coming in. If the switch is open and closed at a certain frequency, the voltage-time graph would be chopped with a maximum value of voltage when the switch is closed and zero when open. The higher the frequency of the switch, the lower the duty cycle will be, so the lower voltage will be produced. The addition of inductors and capacitors is for smoothing the stepped-down voltage to the battery to prevent damaging it. As a final input, the diode works to create the correct path for electrons and prevent any electrons from accumulating only in one place and causing failure.
+
+<img width="812" height="364" alt="image" src="https://github.com/user-attachments/assets/3a0f263e-5ab3-4e04-a960-3a5228cdc5be" />
+
 
 ## Final Waveform
 <img width="623" height="363" alt="image" src="https://github.com/user-attachments/assets/17d214c9-1d5c-4c66-ae81-c1614fc58a6d" />
