@@ -3,6 +3,7 @@ This project is part of my end-of-year high school STEAM project. It's a Buck Co
 
 ## General Circuit
 <img width="946" height="390" alt="image" src="https://github.com/user-attachments/assets/1eb5825d-835b-44ad-82a6-ab8481f1dbbb" />
+
 The main circuit features:
 - Differential Amplifier
 - Triangle-wave generator (Astable Multivibrator fed into an integrator)
